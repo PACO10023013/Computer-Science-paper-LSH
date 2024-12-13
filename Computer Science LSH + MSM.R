@@ -79,20 +79,6 @@ preprocess_text <- function(text) {
   return(text)
 }
 
-# preprocess_text <- function(text) {
-#   text <- tolower(text)  # Convert to lowercase
-#   text <- str_replace_all(text, "\\s+", " ")  # Remove extra spaces
-#   text <- str_replace_all(text, "(\\d+)\\s*[-\"'\\s]*(inch(es)?|in\\.|in|\"|''|-inch)", "\\1 inch")
-#   text <- str_replace_all(text, "(\\d+)\\s*[-\"'\\s]*(hertz|hz|hetrz)", "\\1 hz")
-#   text <- str_replace_all(text, "\\s+(inch|hz)\\b", "\\1")
-#   text <- str_replace_all(text, "(\\d+)\\s*(diag\\.?|diagonal)", "\\1 diagonal")  # Normalize diagonal and class terms
-#   text <- str_replace_all(text, "(\\d+)\\s*[:\\s]\\s*(\\d+)", "\\1:\\2")  # Standardize aspect ratios
-#   text <- str_replace_all(text, "[()]", "")  # Remove parentheses
-#   text <- str_replace_all(text, "\\\\", "")  # Remove backslashes
-#   text <- str_trim(text)  # Trim leading/trailing spaces
-#   return(text)
-# }
-
 
 # Apply preprocessing
 product_info <- product_info %>%
